@@ -1,0 +1,38 @@
+$font-size: 16px;
+
+body {
+  background: #ddffaa;
+  font-size: $font-size;
+}
+
+.box {
+  display: inline-block;
+  border: 1px solid;
+  min-width: 3em;
+  min-height: 3em;
+}
+
+@mixin box($background-color) {
+  @extend .box;
+  background-color: $background-color;
+
+  .header {
+    background-color: lighten($background-color, 20%);
+  }
+
+  .content {
+    background-color: darken($background-color, 5%);
+    font-size: $font-size*0.6;
+  }
+}
+
+.box-blue {
+  @include box(blue);
+}
+
+.box-pink {
+  @include box(pink);
+}
+
+
+
