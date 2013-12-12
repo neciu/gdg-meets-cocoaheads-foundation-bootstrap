@@ -1,0 +1,65 @@
+@import "normalize";
+@import "foundation";
+
+header {
+  @extend .row;
+
+  .logo {
+    @extend .small-12;
+    @extend .medium-2;
+    @extend .columns;
+    @extend .text-center;
+
+    @media #{$medium-up} {
+      img {
+        max-height: 2*$h2-font-size;
+      }
+    }
+  }
+
+  .navigation {
+    @extend .small-12;
+    @extend .medium-10;
+    @extend .columns;
+  }
+
+}
+
+section.content {
+  @extend .row;
+
+  .left-column, .right-column {
+    @extend .columns;
+    border-style: dotted;
+  }
+
+  .left-column {
+    @extend .medium-3;
+    border-width: 1px 0 0 0;
+  }
+
+  .right-column {
+    @extend .medium-9;
+
+    @media #{$small-only} {
+      border-width: 1px 0 0 0;
+    }
+
+    @media #{$medium-up} {
+      border-width: 1px 0 0 1px;
+      img {
+        max-height: 2*$h2-font-size;
+      }
+    }
+
+    .map-container {
+      padding: 1em 0;
+
+      @media #{$small-only} {
+        height: 20em;
+      }
+    }
+
+  }
+}
+
